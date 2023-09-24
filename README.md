@@ -13,9 +13,10 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
-- [Swiss Army Knife](#swiss-army-knife)
 - [FTP](#ftp)
 - [Samba Share](#samba-share)
+- Resources
+- [Swiss Army Knife](#swiss-army-knife)
 - [Portainer](#portainer)
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 
@@ -130,8 +131,6 @@ allow_tcp_forwarding: false
  - Now go to Settings > Devices & Services > Add Intergration > Search HACS > Select all the acknowledgments > Submit > Follow the directions to enter the github key.
  - I add HACS to a new area titled 'Backend'
  - HACS now appears in the left hand menu
-
-### Swiss Army Knife
 
 ### FTP
 
