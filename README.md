@@ -48,6 +48,7 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 | tabbed-card | https://github.com/kinghat/tabbed-card |
 | browser_mod_icon | https://github.com/thomasloven/hass-browser_mod |
 | fonts.css | local and added to resources |
+| Swiss Army Knife | https://github.com/AmoebeLabs/swiss-army-knife-card |
 
 ### Additional Information
 I utilize Blue Iris for my NVR and send a 30 second clip to Home Assistant for review in a card after it convertes to mp4. 
