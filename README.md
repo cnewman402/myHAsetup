@@ -120,6 +120,9 @@ allow_tcp_forwarding: false
  - I use MobaXTerm Personal free portable edition for SSH
    
 ### HACS
+Read more on HACS here: https://hacs.xyz/
+
+We are going to install HACS via terminal with a easy install command.
 
  - Select the new SSH icon in the left side menu
  - Type the following into the terminal
