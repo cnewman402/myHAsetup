@@ -117,7 +117,7 @@ allow_tcp_forwarding: false
  - The add-on will not start without a password configured
  - Root is required for using external apps
  - I use MobaXTerm Personal free portable edition for SSH
- - 
+   
 ### HACS
 
  - Select the new SSH icon in the left side menu
@@ -130,6 +130,8 @@ allow_tcp_forwarding: false
  - Now go to Settings > Devices & Services > Add Intergration > Search HACS > Select all the acknowledgments > Submit > Follow the directions to enter the github key.
  - I add HACS to a new area titled 'Backend'
  - HACS now appears in the left hand menu
+
+### Swiss Army Knife
 
 ### FTP
 
