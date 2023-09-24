@@ -13,6 +13,7 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
+- [Swiss Army Knife](#swiss-army-knife)
 - [FTP](#ftp)
 - [Samba Share](#samba-share)
 - [Portainer](#portainer)
