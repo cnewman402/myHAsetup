@@ -13,7 +13,6 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
-- [FTP](#ftp)
 - [Samba Share](#samba-share)
 - Resources
 - [Swiss Army Knife](#swiss-army-knife)
@@ -135,13 +134,78 @@ We are going to install HACS via terminal with a easy install command.
  - I add HACS to a new area titled 'Backend'
  - HACS now appears in the left hand menu
 
-### FTP
-
 
 ### Samba Share
 
+I use a SMB sometimes to do a quick edit, or move stuff around. I map the drive to my computer for quick browsing, or backups. Lets install a Samba add-on.
+
+- Settings > Addons > Add-On Store > Search Samba or find it on the list fromt he repositories.
+- Click Install
+- Auto Update
+- Select Configuration from up-top
+- Set a Username/Password
+- Set a allowed subet
+- In Example if my home router DHCP is broadcasting 192.168.1.0 255.255.255.0 I would want to allow 192.168.1.0/24
+- Read more about CIDR here: https://docs.netgate.com/pfsense/en/latest/network/cidr.html
+- More about RFC1918 Private Subnets here: https://en.wikipedia.org/wiki/Private_network
+- More about mapping shares to your computer here: [https://superuser.com/questions/570928/mapping-a-smb-share-in-windows](https://www.techrepublic.com/article/how-to-connect-to-linux-samba-shares-from-windows-10/)
+- In Example Map: \\192.168.1.69\config
+  
 
 ### Portainer
 
+I am installing Portainer. I utilize Portainer for HomeBridge. HomeBridge is a virtual Apple HomeKit that allows me to add a few things easier. Sometimes if products are not supported in Home Assistant, or the process is way too much, then ill just see if I can add it to HomeBridge. In this document I will add my Google Nest Thermostats, SwitchBot Tilt Blinds, and my Home Alarm using HomeBridge.
+
+- In Home Assistant select Settings > Add-ons > Add-On Store
+- Click the three dots in the top right-hand corner, we need to add a repository
+- Add: https://github.com/alexbelgium/hassio-addons, then close
+- Refresh the Add-On Store page now
+- Uptop in the search field search for Portainer
+- Select Portainer
+- Select Install
+- Once its installed enable Auto Update, and Show in Sidebar
+- Disable Protection Mode
+- Select the Configuration
+- Change the password and save
+- Go back to Info and click Start
+- Select Open in UI
+- Default User is admin (lowercase)
+- Password is what you set earlier in the Portainer configuration
+- Its going to require you to change your password, your choice, you can select remind me later.
+- Select Live Connect
+- Select Stacks
+- Select Add stack
+- Name your stack uptop ie: homebridge (this must be lowercase aplhanumeric with underscores or dashes only)
+- Enter the following into the Web Editor
+
+```yaml
+version: '2'
+services:
+  homebridge:
+    image: oznu/homebridge:latest
+    restart: always
+    network_mode: host
+    environment:
+      - PGID=0
+      - PUID=0
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=8581
+    volumes:
+      - /mnt/data/supervisor/homeassistant/homebridge:/homebridge
+``` 
+
+- Click Deploy Stack
+- Let it cook
+- Once you see it was successfully deployed you can now visit your homebridge stack
+- IP Address is your_ha_ip:8581
+- In Example: 192.168.1.69:8581
+- You will be welcomed by your HomeBridge select Get Started
+- Set a username and password
+
+The first thing I do is update the GUI. 
+
+- Plugins > Homebridge UI > Update
+- It will reboot
+- 
 
 ### Homebridge Instance with Plugins
