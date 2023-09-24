@@ -3,16 +3,21 @@ This is my Home Assistant build in 2023. This setup utilizes multiple Add-Ons an
 
 This setup utilizes Hyper-V
 
+This honestly is documentation for me to refer to when building or rebuilding, but feel free to follow along.
+
+
+
 ## Table of Content <!-- omit in toc -->
+- [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
-- HACS
-- FTP
-- Samba Share
-   Portainer
-Homebridge Instance with Plugins
+- [HACS](#hacs)
+- [FTP](#ftp)
+- [Samba Share](#samba-share)
+- [Portainer](#portainer)
+- [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 
 
-### Resources Utilized
+## Addons
 
 :white_check_mark: **Add-Ons List**.
 | Name  | URL LINK |
