@@ -335,7 +335,33 @@ BrowserMod:
  - Three dots menu in the top right
  - Search BrowserMod
  - This will require a reboot
- - 
+ - Go to Settings > Intergrations > Add Intergrations
+ - Search Browser Mod and Install
+ - Browser Mod now appears in the lefthand menu.
+ - You have to go into Browser Mod and Register the browser
+ - Auto Register as well
+ - Lock Register
+ - Click Cast Register
+
+I plan on using Browser Mod to pop-up the doorbell then someone ring it on all screens. If you dont plan on using this mod its not mandatory to install.
+
+Lets go edit the Configuration.yaml, but before doing so lets install Visual Studio Code first for easier editing.
+
+- Settings >Addons > Search
+- Search for Studio Code Server
+- Install
+- Select Auto Update and Show in Sidebar
+- Start
+- Click Studio Code Server on side menu
+- Trust the author(s)
+- The Addon will not turn green until you trust the install
+
+Now would be a good time to create another checkpoint on your VM. Go to Hyper-V right click the VM and create one.
+
+
+
+
+
   
 
 
