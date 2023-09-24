@@ -18,6 +18,7 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 - [Add-Ons](#addons)
 - [Configuration.yaml](#configuration-yaml)
+- [Adding Emby](#adding-emby)
 
 
 
