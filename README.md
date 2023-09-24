@@ -361,6 +361,10 @@ Lets go edit the Configuration.yaml, but before doing so lets install Visual Stu
 
 Now would be a good time to create another checkpoint on your VM. Go to Hyper-V right click the VM and create one.
 
+### Adding Emby 
+
+Lets add Emby to the install. In the above list there was a upcoming media card addon. We will use this to show what new movies Emby has added lately. I personally use Radarr, etc to auto download media so you never know what latest popular movie will add itself to the server.
+
 
 
 
