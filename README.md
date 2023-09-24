@@ -18,6 +18,8 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Add-Ons](#addons)
 - [Configuration.yaml](#configuration-yaml)
 - [Adding Emby](#adding-emby)
+- [Adding Blue Iris Video Clips](#adding-blue-iris-video-clips)
+- [Automating Clips Cleanup](#automating-clip-cleanup)
 
 
 
@@ -417,7 +419,31 @@ max: 6
 These are the settings I prefer. You can read more about this addon in the link located in the addons table.
 
 
+### Adding Blue Iris Video Clips
 
+Warning: The way I store clips is exposed. I dont allow WAN access to my Home Assistant so im not to worried about it. That and they are 30 second clips of my cameras, which is kind of boring. I placing my clips into the /config/www folder. I place my clips into different folders because I use mutliple dashboards to draw each camera clips. If I want to review clips from one camera, I go to one dashboard, if I want to view the other cameras, I go to their dashboards.
+
+My Folder Structure:
+```bash
+/config
+   |------www
+           |-------blueiris
+                     |-----backdoor
+                     |-----frontdoor
+                     |-----sideyard
+                     |-----driveway
+```
+
+```yaml
+homeassistant:
+  allowlist_external_dirs:
+    - /config/www/blueiris
+  media_dirs:
+    local: /config/www/
+```
+
+
+### Automating Clips Cleanup
 
 
 
