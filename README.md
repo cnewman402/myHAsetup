@@ -206,6 +206,45 @@ The first thing I do is update the GUI.
 
 - Plugins > Homebridge UI > Update
 - It will reboot
-- 
 
-### Homebridge Instance with Plugins
+Lets install a plugin. Im going to install my thermostats. The current Nest procedure is way too much. I find this simpler.
+
+### HomeBridge Instance with Plugins
+
+I have two Google Nest Thermostats. I am going to install the plugin for those in HomeBridge, and then add them to Home Assistant fromt he HomeBridge.
+
+- Click Plugins
+- Search for Nest
+- Install the Verified Homebridge nest plugin
+
+In order to add the thermostats to HomeBridge you have to get a couple pieces of information from your Google account. You will want to do this inside a Chromium based browser (Chrome, Edge)
+
+-	Open a Chromium based browser tab in Incognito/Private Mode (or clear your cache).
+-	Open Developer Tools (View/Developer/Developer Tools) or press F12.
+-	Click on 'Network' tab. Make sure 'Preserve Log' is checked.
+-	In the 'Filter' box, enter issueToken
+-	Go to home.nest.com, and click 'Sign in with Google'. Log into your account.
+-	One network call (beginning with iframerpc) will appear in the Dev Tools window. Click on it.
+-	In the Headers tab, under General, copy the entire Request URL (beginning with https://accounts.google.com). This is your "issueToken" in config.json.
+-	In the 'Filter' box, enter oauth2/iframe
+-	Several network calls will appear in the Dev Tools window. Click on the last iframe call.
+-	In the Headers tab, under Request Headers, copy the entire cookie (include the whole string which is several lines long and has many field/value pairs - do not include the cookie: name). This is your "cookies" in config.json.
+-	Do not log out of home.nest.com, as this will invalidate your credentials. Just close the browser tab.
+-	Restart HomeBridge
+-	Do you see the Nest products list in the console of HomeBridge? Cool. If not retry.
+
+Now we need to add the HomeBridge to Home Assistant.
+
+- Go to Home Assistant
+- Go to Settings
+- Go to Devices and Services
+- Home Assistant should have discovered the HomeBridge
+- Select Configure on the Homebridge Card
+- Use the Pairing Code (###-##-###) from the Homebridge Console to pair it to Home Assistant
+- Now your thermostats are in Home Assistant
+- This is a reliable solution.
+- I have never had it fail and have been running it for years without changes other than updating plugins, or adding devices.
+- I have never got Homebridge to sync with my Home App on my iPhone.
+  
+
+
