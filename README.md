@@ -15,8 +15,9 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Samba Share](#samba-share)
 - [Swiss Army Knife](#swiss-army-knife)
 - [Portainer](#portainer)
-- [Add-Ons](#addons)
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
+- [Add-Ons](#addons)
+- [Configuration.yaml](#configuration-yaml)
 
 
 
@@ -257,6 +258,10 @@ The first thing im going to do is add all these addons. I usuallay add these via
 
 Now if I need to rollback I have a easy path. I put my lovelace into yaml mode, then I place all of these add-ons into my config.yaml. 
 
+## Configuration Yaml
+
+Lets put the configuration into yaml mode.
+
 Lovelace in Yaml Mode:
 ```yaml
 # /=======================\
@@ -266,7 +271,7 @@ Lovelace in Yaml Mode:
 lovelace:
   mode: yaml
 ```
-Then I add the resources.
+Then I add the resources directly to the configuration.
 
 ```yaml
 # /=======================\
@@ -301,7 +306,9 @@ Then I add the resources.
       { url: '/local/fonts.css?v=2.1',                                              type: css }
     ]
 ```
-You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. 
+You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. If I had to do anything extra I will notate it here.
+
+
 
 
   
