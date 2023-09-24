@@ -301,7 +301,7 @@ Then I add the resources.
       { url: '/local/fonts.css?v=2.1',                                              type: css }
     ]
 ```
-You will want to add the resources one at a time,a nd reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. 
+You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. 
 
 
   
