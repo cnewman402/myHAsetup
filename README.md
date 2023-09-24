@@ -366,6 +366,23 @@ Now would be a good time to create another checkpoint on your VM. Go to Hyper-V 
 
 Lets add Emby to the install. In the above list there was a upcoming media card addon. We will use this to show what new movies Emby has added lately. I personally use Radarr, etc to auto download media so you never know what latest popular movie will add itself to the server.
 
+- Open Emby and login as an administrator
+- Go to Settings in Emby
+- Under Advanced in Emby select API Keys
+- Create a new API key
+- Copy your API key
+- Open Home Assistant
+- Go to your configuration.yaml
+- Add the following:
+```yaml
+media_player:
+    - platform: emby
+      host: 192.168.1.69
+      ssl: False
+      port: 8096
+      api_key: <paste_your_api_key_here>
+```
+
 
 
 
