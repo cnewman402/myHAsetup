@@ -3,13 +3,13 @@ This is my Home Assistant build in 2023. This setup utilizes multiple Add-Ons an
 
 This setup utilizes Hyper-V
 
-### Add-Ons Utilized
-* SSH & Web Terminal
-* HACS
-* FTP
-* Samba Share
-* Portainer
-* Homebridge Instance with Plugins
+## Table of Content <!-- omit in toc -->
+- [SSH & Web Terminal](#ssh--web-terminal)
+- HACS
+- FTP
+- Samba Share
+   Portainer
+Homebridge Instance with Plugins
 
 
 ### Resources Utilized
@@ -42,6 +42,23 @@ This setup utilizes Hyper-V
 | fonts.css | local and added to resources |
 
 ### Other Information
-I also personaly utilize Blue Iris for my NVR and send a 30 second clip to Home Assistant for review in a card after it convertes to mp4. I will review how I handle disk space with automations in Home Assistant to maintain the disk space on the Home Assistant VM.
+I utilize Blue Iris for my NVR and send a 30 second clip to Home Assistant for review in a card after it convertes to mp4. 
+I will review how I handle disk space with automations in Home Assistant to maintain the disk space on the Home Assistant VM.
+I utilize Emby for my home media server, and will review how to show what is playing on what device as well as the latest downloaded movies.
 
-Additionally I utilize Emby for my home media server, and will review how to show what is playing on what device as well as the latest downloaded movies.
+### SSH & Web Terminal
+
+
+### HACS
+
+
+### FTP
+
+
+### Samba Share
+
+
+### Portainer
+
+
+### Homebridge Instance with Plugins
