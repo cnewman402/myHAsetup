@@ -308,6 +308,14 @@ Then I add the resources directly to the configuration.
 ```
 You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. If I had to do anything extra I will notate it here.
 
+- Open HACS
+- Select Frontend
+- Select Explore and Download Repositories
+- Search the card name
+- Click Download
+- It will refresh your Home Assistant
+- The card should appear in HACS
+
 
 
 
