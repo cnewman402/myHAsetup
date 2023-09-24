@@ -75,19 +75,36 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 - Select the .vhdx you extracted earlier from the downloaded Home Assistant appliance (the HA download)
 - Do not start the VM yet
 - Right-Click the VM and select Settings
-- Select Security > Un-check 'Enable Secure Boot'
-- Select Hard Drive > New Button > Select Fixed Size > Name it whatever (your choice) > Next > Size: 200 GB plus> Next > Finish
-- Now you have two hard drives on HA. We are going to move to the bigger drive.
-- The reason I do this is because I had an issue with expanding the drive and Home Assistant detecting it expanded
-- I also do this becaiuse we are going to send Blue Iris .mp4 clips to a folder structure and need more storage
+- Select Security > Un-check 'Enable Secure Boot' then click apply
+- Select Hard Drive > Edit > Expand > Next > Size: 200 GB plus> Next > Finish
+- I do this because we are going to send Blue Iris .mp4 clips to a folder structure and need more storage
+- Once the drive is completed select Apply/OK
+- Power on your new HA VM (right-click start)
+- Note: Look into Checkpoints they can help you restore along the way. I suggest maybe making one daily as you edit.
+- If you got an error stating it could not find a boot device, ensure you disabled secure boot on the VM.
 
 
 
 ### SSH & Web Terminal
-
+ - Log in to Home Assistant
+ - Select your user icon in the bottom left corner
+ - Enable Advanced Mode for your user
+ - Select Settings from the left hand side menu
+ - Select Add-Ons
+ - Select the Add-On Store button in the lower right-hand corner
+ - Search SSH
+ - Install Terminal & SSH
+ - Select Start on boot, Auto update, and Show in sidebar. Click Start
+ - Watch the log to ensure it starts properly, and address any errors
 
 ### HACS
 
+ - Select the new SSH icon in the left side menu
+ - Type the following into the terminal
+   ```yaml
+   wget -O - https://get.hacs.xyz | bash -
+   ```
+ - Now you have HACS installed
 
 ### FTP
 
