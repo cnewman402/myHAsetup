@@ -383,6 +383,45 @@ media_player:
       api_key: <paste_your_api_key_here>
 ```
 
+Now we need to add a sensor entry into configuration.yaml for the upcoming media card. You need to collect your used ID for this entry from Emby.
+
+- Open Emby and go to settings
+- Select profile from the left side menu
+- Look at the URL in the browser window
+- You will see the usedID= in the URL followed by & serverID=
+- Copy just the used id value after the equals sign down to the '&'
+- Add the following to your configuration.yaml:
+```yaml
+sensor:
+- platform: emby_upcoming_media
+  api_key: <enter_your_api_key>
+  user_id: <enter_your_user_id>
+  host: 192.168.1.69
+  port: 8096
+  ssl: False
+  max: 10
+  use_backdrop: true
+  group_libraries: false
+  include:
+    - Movies
+    - TV Shows
+```
+
+Notice the include entery. I have Movies and TV Shows in the list. Those are the media folders I have on my Emby server. You may have different names for your media folder. You will want to use your media names. Now we can use that sensor on a dashboard. Enter the following on one of your dashboards.
+```yaml
+type: custom:upcoming-media-card
+entity: sensor.emby_latest_movies
+title: Latest Movies
+image_style: fanart
+max: 6
+```
+These are the settings I prefer. You can read more about this addon in the link located in the addons table.
+
+
+
+
+
+
 
 
 
