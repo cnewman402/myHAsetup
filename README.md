@@ -8,6 +8,8 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 
 
 ## Table of Content <!-- omit in toc -->
+- [Install Hyper-V](#install-hyper-v)
+- [Install Home Assistant for Hyper-V](#install-home-assistant-for-hyper-v)
 - [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
@@ -46,10 +48,16 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 | browser_mod_icon | https://github.com/thomasloven/hass-browser_mod |
 | fonts.css | local and added to resources |
 
-### Other Information
+### Additional Information
 I utilize Blue Iris for my NVR and send a 30 second clip to Home Assistant for review in a card after it convertes to mp4. 
 I will review how I handle disk space with automations in Home Assistant to maintain the disk space on the Home Assistant VM.
 I utilize Emby for my home media server, and will review how to show what is playing on what device as well as the latest downloaded movies.
+
+### Install Hyper-V
+
+
+### Install Home Assistant for Hyper-V
+
 
 ### SSH & Web Terminal
 
