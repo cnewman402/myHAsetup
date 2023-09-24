@@ -316,6 +316,28 @@ You will want to add the resources one at a time, and reboot your Home Assistant
 - It will refresh your Home Assistant
 - The card should appear in HACS
 
+Sidebar Card: Go to the hacs store and use the repo url https://github.com/DBuit/sidebar-card and add this as a custom repository under settings.
+- HACS
+- Intergrations
+- Three dots menu in the top right
+- Add custom repositories
+- Repository: https://github.com/DBuit/sidebar-card
+- Category: Lovelace
+- Add
+- Close the window
+- Frontend
+- Explore and Download
+- Now add sidebar
+
+BrowserMod:
+ - HACS
+ - Intergrations
+ - Three dots menu in the top right
+ - Search BrowserMod
+ - This will require a reboot
+ - 
+  
+
 
 
 
