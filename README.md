@@ -249,7 +249,61 @@ Here is a list of addons that I use for various things throughout my build. I th
 | fonts.css | local and added to resources |
 | Swiss Army Knife | https://github.com/AmoebeLabs/swiss-army-knife-card |
 
-The first thing im going to do is add all these addons.
+The first thing im going to do is add all these addons. I usuallay add these via HACS. First im going to make a checkpoint on my Hyper-V instance in case I need to rollback.
+
+- Open Hyper-V
+- Select the VM
+- Right-click and select checkpoint
+
+Now if I need to rollback I have a easy path. I put my lovelace into yaml mode, then I place all of these add-ons into my config.yaml. 
+
+Lovelace in Yaml Mode:
+```yaml
+# /=======================\
+# | YAML MODE             |
+# \=======================/
+
+lovelace:
+  mode: yaml
+```
+Then I add the resources.
+
+```yaml
+# /=======================\
+# | RESOURCES DECLARE     |
+# \=======================/
+# All the resources added
+  resources:
+    [
+      { url: /hacsfiles/apexcharts-card/apexcharts-card.js,                         type: module },
+      { url: /hacsfiles/bar-card/bar-card.js,                                       type: module },
+      { url: /hacsfiles/button-card/button-card.js,                                 type: module },
+      { url: /hacsfiles/custom-icons/custom-icons.js,                               type: module },
+      { url: /hacsfiles/kiosk-mode/kiosk-mode.js,                                   type: module },
+      { url: /hacsfiles/lovelace-layout-card/layout-card.js,                        type: module },
+      { url: /hacsfiles/lovelace-more-info-card/more-info-card.js,                  type: module },
+      { url: /hacsfiles/lovelace-mushroom/mushroom.js,                              type: module },
+      { url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js,            type: module },
+      { url: /hacsfiles/swipe-card/swipe-card.js,                                   type: module },
+      { url: /hacsfiles/tabbed-card/tabbed-card.js,                                 type: module },
+      { url: /hacsfiles/mini-media-player/mini-media-player-bundle.js,              type: module },
+      { url: /hacsfiles/upcoming-media-card/upcoming-media-card.js,                 type: module },
+      { url: /hacsfiles/refreshable-picture-card/refreshable-picture-card.js,       type: module },
+      { url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js,                  type: module },
+      { url: /hacsfiles/simple-thermostat/simple-thermostat.js,                     type: module },
+      { url: /hacsfiles/sidebar-card/sidebar-card.js,                               type: module },
+      { url: /hacsfiles/simple-weather-card/simple-weather-card-bundle.js,          type: module },
+      { url: /hacsfiles/logbook-card/logbook-card.js,                               type: module },
+      { url: /hacsfiles/gallery-card/gallery-card.js,                               type: module },
+      { url: /hacsfiles/tabbed-card/tabbed-card.js,                                 type: module },
+
+      { url: '/local/browser_mod_icon.js?v=0.5',                                    type: module },
+      { url: '/local/fonts.css?v=2.1',                                              type: css }
+    ]
+```
+You will want to add the resources one at a time,a nd reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. 
+
+
   
 
 
