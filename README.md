@@ -13,7 +13,6 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
 - [Samba Share](#samba-share)
-- [Swiss Army Knife](#swiss-army-knife)
 - [Portainer](#portainer)
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 - [Add-Ons](#addons)
