@@ -10,13 +10,12 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 ## Table of Content <!-- omit in toc -->
 - [Install Hyper-V](#install-hyper-v)
 - [Install Home Assistant for Hyper-V](#install-home-assistant-for-hyper-v)
-- [Add-Ons](#addons)
 - [SSH & Web Terminal](#ssh--web-terminal)
 - [HACS](#hacs)
 - [Samba Share](#samba-share)
-- Resources
 - [Swiss Army Knife](#swiss-army-knife)
 - [Portainer](#portainer)
+- [Add-Ons](#addons)
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 
 
