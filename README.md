@@ -260,17 +260,18 @@ Now if I need to rollback I have a easy path. I put my lovelace into yaml mode, 
 
 ## Configuration Yaml
 
-Lets put the configuration into yaml mode.
 
-Lovelace in Yaml Mode:
-```yaml
-# /=======================\
-# | YAML MODE             |
-# \=======================/
+You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. If I had to do anything extra I will notate it here.
 
-lovelace:
-  mode: yaml
-```
+- Open HACS
+- Select Frontend
+- Select Explore and Download Repositories
+- Search the card name
+- Click Download
+- It will refresh your Home Assistant
+- The card should appear in HACS
+
+
 Then I add the resources directly to the configuration.
 
 ```yaml
@@ -306,16 +307,18 @@ Then I add the resources directly to the configuration.
       { url: '/local/fonts.css?v=2.1',                                              type: css }
     ]
 ```
-You will want to add the resources one at a time, and reboot your Home Assistant after every install to ensure there is not errors. This will take the guess work out of which change you made caused an issue. All of these are done within HACS so it should be pretty straight forward. If I had to do anything extra I will notate it here.
 
-- Open HACS
-- Select Frontend
-- Select Explore and Download Repositories
-- Search the card name
-- Click Download
-- It will refresh your Home Assistant
-- The card should appear in HACS
+Lets put the configuration into yaml mode.
 
+Lovelace in Yaml Mode:
+```yaml
+# /=======================\
+# | YAML MODE             |
+# \=======================/
+
+lovelace:
+  mode: yaml
+```
 Sidebar Card: Go to the hacs store and use the repo url https://github.com/DBuit/sidebar-card and add this as a custom repository under settings.
 - HACS
 - Intergrations
