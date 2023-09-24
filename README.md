@@ -82,6 +82,9 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
 - Power on your new HA VM (right-click start)
 - Note: Look into Checkpoints they can help you restore along the way. I suggest maybe making one daily as you edit.
 - If you got an error stating it could not find a boot device, ensure you disabled secure boot on the VM.
+- You can now see your IP if you right-click your VM and select connect.
+- In Example: 192.168.1.69:8123
+- After a few minutes home assistant will prompt you for some info, fill out the form.
 
 
 
@@ -93,10 +96,26 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
  - Select Add-Ons
  - Select the Add-On Store button in the lower right-hand corner
  - Search SSH
- - Install Terminal & SSH
+ - Install Terminal & SSH or Advanced SSH & Web Terminal (I prefer the Advanced Add-On)
  - Select Start on boot, Auto update, and Show in sidebar. Click Start
  - Watch the log to ensure it starts properly, and address any errors
+ - Sample Config for the Advanced Add-On:
 
+```yaml
+Username: root (Note: Has to be root)
+Password: Password123
+authorized_keys: []
+sftp: true
+compatibility_mode: false
+allow_agent_forwarding: false
+allow_remote_port_forwarding: false
+allow_tcp_forwarding: false
+```
+ - Ensure you click Save after changing your config (the first save not the bottom one)
+ - The add-on will not start without a password configured
+ - Root is required for using external apps
+ - I use MobaXTerm Personal free portable edition for SSH
+ - 
 ### HACS
 
  - Select the new SSH icon in the left side menu
@@ -105,6 +124,10 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
    wget -O - https://get.hacs.xyz | bash -
    ```
  - Now you have HACS installed
+ - Select  Setting from the left side menu > System > Select the Power button in the top right corner > Restart Home Assistant
+ - Now go to Settings > Devices & Services > Add Intergration > Search HACS > Select all the acknowledgments > Submit > Follow the directions to enter the github key.
+ - I add HACS to a new area titled 'Backend'
+ - HACS now appears in the left hand menu
 
 ### FTP
 
