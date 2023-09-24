@@ -54,9 +54,33 @@ I will review how I handle disk space with automations in Home Assistant to main
 I utilize Emby for my home media server, and will review how to show what is playing on what device as well as the latest downloaded movies.
 
 ### Install Hyper-V
+On the Windows desktop, select the Start button and type any part of the name Windows PowerShell.<br>
 
+Right-click Windows PowerShell and select Run as Administrator.<br>
+
+```yaml
+Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
+```
 
 ### Install Home Assistant for Hyper-V
+- Download Home Assistant for Hyper-V - [Home Assistant Install Options - Hyper-V](https://www.home-assistant.io/installation/windows/ "Home Assistant Install Options - Hyper-V")
+- Extract the Zip downloaded
+- Open Hyper-V
+- Action > New > Virtual Machine
+- Select Generation 2 during install
+- I usually give it 4096 MB (4 GB of Memory)
+- Dont use Dynamic Memory
+- Connect it to your NIC
+- Use an existing disk
+- Select the .vhdx you extracted earlier from the downloaded Home Assistant appliance (the HA download)
+- Do not start the VM yet
+- Right-Click the VM and select Settings
+- Select Security > Un-check 'Enable Secure Boot'
+- Select Hard Drive > New Button > Select Fixed Size > Name it whatever (your choice) > Next > Size: 200 GB plus> Next > Finish
+- Now you have two hard drives on HA. We are going to move to the bigger drive.
+- The reason I do this is because I had an issue with expanding the drive and Home Assistant detecting it expanded
+- I also do this becaiuse we are going to send Blue Iris .mp4 clips to a folder structure and need more storage
+
 
 
 ### SSH & Web Terminal
