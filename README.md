@@ -20,35 +20,7 @@ This honestly is documentation for me to refer to when building or rebuilding, b
 - [Homebridge Instance with Plugins](#homebridge-instance-with-plugins)
 
 
-## Addons
 
-:white_check_mark: **Add-Ons List**.
-| Name  | URL LINK |
-| ---- | ----------- |
-| apexcharts-card | https://github.com/RomRider/apexcharts-card |
-| bar-card | https://github.com/custom-cards/bar-card |
-| button-card | https://github.com/custom-cards/button-card |
-| custom-icons | https://github.com/Mariusthvdb/custom-icons |
-| kiosk-mode | https://github.com/maykar/kiosk-mode |
-| lovelace-layout-card | https://github.com/thomasloven/lovelace-layout-card |
-| lovelace-more-info-card | https://github.com/thomasloven/lovelace-more-info-card |
-| lovelace-mushroom | https://github.com/piitaya/lovelace-mushroom |
-| lovelace-slider-entity-row | https://github.com/thomasloven/lovelace-slider-entity-row |
-| swipe-card | https://github.com/bramkragten/swipe-card |
-| tabbed-card | https://github.com/kinghat/tabbed-card |
-| mini-media-player | https://github.com/kalkih/mini-media-player |
-| upcoming-media-card | https://github.com/custom-cards/upcoming-media-card |
-| refreshable-picture-card | https://github.com/dimagoltsman/refreshable-picture-card |
-| mini-graph-card | https://github.com/kalkih/mini-graph-card |
-| simple-thermostat | https://github.com/nervetattoo/simple-thermostat |
-| sidebar-card | https://github.com/DBuit/sidebar-card |
-| simple-weather-card | https://github.com/kalkih/simple-weather-card |
-| logbook-card | https://github.com/royto/logbook-card |
-| gallery-card | https://github.com/TarheelGrad1998/gallery-card |
-| tabbed-card | https://github.com/kinghat/tabbed-card |
-| browser_mod_icon | https://github.com/thomasloven/hass-browser_mod |
-| fonts.css | local and added to resources |
-| Swiss Army Knife | https://github.com/AmoebeLabs/swiss-army-knife-card |
 
 ### Additional Information
 I utilize Blue Iris for my NVR and send a 30 second clip to Home Assistant for review in a card after it convertes to mp4. 
@@ -245,6 +217,40 @@ Now we need to add the HomeBridge to Home Assistant.
 - This is a reliable solution.
 - I have never had it fail and have been running it for years without changes other than updating plugins, or adding devices.
 - I have never got Homebridge to sync with my Home App on my iPhone.
+
+## Addons
+
+Here is a list of addons that I use for various things throughout my build. I think I have a few in here that I dont actually use, im not sure so I added them all. I also havent finished my dashboard. I tried to add something from a repository that was unmaintained and broke my Home Assistant and thats what prompted me to document. I ended up restoring the core and recovering my instance, but I didnt think I was going to. When I completed my dashboard I planned on documenting and sharing, but im here early. As I add to my build I will update this document with my latest additions. One thing I will be adding to this dashboard is a sidebar. I am always open to critism, so if there is a better way to do something please let me know.
+
+:white_check_mark: **Add-Ons List**.
+| Name  | URL LINK |
+| ---- | ----------- |
+| apexcharts-card | https://github.com/RomRider/apexcharts-card |
+| bar-card | https://github.com/custom-cards/bar-card |
+| button-card | https://github.com/custom-cards/button-card |
+| custom-icons | https://github.com/Mariusthvdb/custom-icons |
+| kiosk-mode | https://github.com/maykar/kiosk-mode |
+| lovelace-layout-card | https://github.com/thomasloven/lovelace-layout-card |
+| lovelace-more-info-card | https://github.com/thomasloven/lovelace-more-info-card |
+| lovelace-mushroom | https://github.com/piitaya/lovelace-mushroom |
+| lovelace-slider-entity-row | https://github.com/thomasloven/lovelace-slider-entity-row |
+| swipe-card | https://github.com/bramkragten/swipe-card |
+| tabbed-card | https://github.com/kinghat/tabbed-card |
+| mini-media-player | https://github.com/kalkih/mini-media-player |
+| upcoming-media-card | https://github.com/custom-cards/upcoming-media-card |
+| refreshable-picture-card | https://github.com/dimagoltsman/refreshable-picture-card |
+| mini-graph-card | https://github.com/kalkih/mini-graph-card |
+| simple-thermostat | https://github.com/nervetattoo/simple-thermostat |
+| sidebar-card | https://github.com/DBuit/sidebar-card |
+| simple-weather-card | https://github.com/kalkih/simple-weather-card |
+| logbook-card | https://github.com/royto/logbook-card |
+| gallery-card | https://github.com/TarheelGrad1998/gallery-card |
+| tabbed-card | https://github.com/kinghat/tabbed-card |
+| browser_mod_icon | https://github.com/thomasloven/hass-browser_mod |
+| fonts.css | local and added to resources |
+| Swiss Army Knife | https://github.com/AmoebeLabs/swiss-army-knife-card |
+
+The first thing im going to do is add all these addons.
   
 
 
