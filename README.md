@@ -474,6 +474,9 @@ Now lets configure Alert clips to go to these "FTP servers"/Camera directories:
 - Click the video options and set those if you want
 - Select your sever we configured earlier
 - Filename: &CAM.%Y%m%d_%H%M%S%t-Alert
+- Do this for each cameras to its respective FTP "Server"
+
+Now you have clips going to your Home Assistant that you can view, right inside Home Assistant. You might ask, why? Well we are going to use one of those addons we install earlier to create a full screen viewer these these 30 second alert clips. I find this useful for review. I no longer have to go to UI3, or open my Blue Iris. I can just go to my Home Assistant and review all the alerts in good detail.  
 
   
 ### Automating Clips Cleanup
