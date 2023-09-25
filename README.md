@@ -434,6 +434,8 @@ My Folder Structure:
                      |-----driveway
 ```
 
+Once I have my folder structure in place I need to allow the media from Blue Iris. In order to do this I add this to the configuration.yaml
+
 ```yaml
 homeassistant:
   allowlist_external_dirs:
@@ -441,8 +443,39 @@ homeassistant:
   media_dirs:
     local: /config/www/
 ```
+Now I have to go to Blue Iris and edit each camera sending alerts to the Home Assistant folder of the camera in the above structure.
 
+- Open Blue Iris
+- I created a user dedicated to Home Assistant in my Blue Iris
+- Settings > Users > Create the user
+- Next visit the FTP Servers tab
+- I create an FTP connection for each of my folders (4 in total, one for each folder)
+- Click the plus symbol
+- Description: HA-Sideyard
+- Server Type: FTP
+- Server Address: Your Home Assistant IP
+- Port: 21
+- Base Folder: /config/www/blueiris/sideyard/
+- Login: User you created
+- Idle disconnect I have 90 and Max Connections is 5, but they will never all be used
+- Options: Passive transfer mode
+- Click Test and it should put a test ftp text file on the folder. If not revisit the directions and try again.
+- Now make the other three FTP server connections or how many ever you have
 
+Now lets configure Alert clips to go to these "FTP servers"/Camera directories:
+
+- Right-click a camera
+- Camera Settings
+- Alerts Tab
+- Actions > On Alert
+- Use the plus (+) icon to create a new Action
+- Im calling mine in this example drivewayAlert
+- Select the radio button 'Camera's alert MP4 sec: <enter 30 or whatever you want>
+- Click the video options and set those if you want
+- Select your sever we configured earlier
+- Filename: &CAM.%Y%m%d_%H%M%S%t-Alert
+
+  
 ### Automating Clips Cleanup
 
 
