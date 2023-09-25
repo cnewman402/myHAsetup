@@ -481,11 +481,28 @@ Now you have clips going to your Home Assistant that you can view, right inside 
   
 ### Automating Clips Cleanup
 
+Now that we have these clips duplicating themselves to Home Assistant, we are going to need a way to clean them up. We did expand our drive earlier when we installed the VM in Hyper-V, but still video takes up space. I only like to keep a few days on my Home Assistant. If im really looking for more than the past three days I should be in Blue Iris searching in depth. So we are going to setup some automations to clean the directories out daily, and clean up aything past three days of timestamps. For this we need to create a service. We are going to call it shell_command_rotate_camlog. We will create a trigger every 24 hours to call the service.
 
+- Create a folder called shell_scripts in the config folder of Home Assistant
+- Create a shell script in there, you can upload via FTP, SMB, drag and drop it in, however you want to get it there
+```yaml
+find /config/www/blueiris/backdoor/ /config/www/blueiris/driveway/ /config/www/blueiris/frontdoor/ /config/www/blueiris/sideyard/ -type f -mtime +3 -delete
+```
 
+```yaml
+shell_command.shell_rotate_camlog
+```
 
+```yaml
+# /=======================\
+# | INCLUDES DECLARE      |
+# \=======================/
 
-
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+shell_command: !include shell_commands.yaml
+```
 
   
 
