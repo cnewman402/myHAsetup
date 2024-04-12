@@ -192,7 +192,7 @@ I have two Google Nest Thermostats. I am going to install the plugin for those i
 - Install the Verified Homebridge nest plugin
 
 In order to add the thermostats to HomeBridge you have to get a couple pieces of information from your Google account. You will want to do this inside a Chromium based browser (Chrome, Edge)
-
+- A great video walkthrough https://www.youtube.com/watch?v=QWlfoy5NRRw
 -	Open a Chromium based browser tab in Incognito/Private Mode (or clear your cache).
 -	Open Developer Tools (View/Developer/Developer Tools) or press F12.
 -	Click on 'Network' tab. Make sure 'Preserve Log' is checked.
