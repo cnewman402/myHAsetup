@@ -156,7 +156,7 @@ I am installing Portainer. I utilize Portainer for HomeBridge. HomeBridge is a v
 version: '2'
 services:
   homebridge:
-    image: oznu/homebridge:latest
+    image: homebridge/homebridge:latest
     restart: always
     network_mode: host
     environment:
